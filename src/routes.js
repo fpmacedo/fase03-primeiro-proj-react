@@ -12,7 +12,7 @@ export default function Routes() {
         {/* chamando as rotas com os componentes, o exact serve para
         identificar as rotas e poder distingui-las exatamente */}
         <Route path="/" exact component={Main} />
-        <Route path="/repository" component={Repository} />
+        <Route path="/repository/:repository" component={Repository} />
       </Switch>
     </BrowserRouter>
   );
