@@ -42,6 +42,63 @@ export const Owner = styled.header`
   }
 `;
 
+export const SelectFilter = styled.select`
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #7159c1;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PageActions = styled.div`
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  button {
+    transition: opacity 0.25s ease-out;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+  }
+`;
+export const PageButton = styled.button.attrs(props => ({
+  type: 'page',
+  disabled: props.disabled,
+}))`
+  background: #7159c1;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+`;
+
+export const IssuesFilter = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+`;
+
 export const IssuesList = styled.ul`
   padding-top: 30px;
   margin-top: 30px;
@@ -99,5 +156,14 @@ export const IssuesList = styled.ul`
         color: #999;
       }
     }
+  }
+
+  h1 {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #7159c1;
+    justify-content: left;
+    align-items: left;
   }
 `;
